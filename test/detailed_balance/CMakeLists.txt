@@ -32,6 +32,8 @@ function(one_balance_test_general
                 "-i" "${CMAKE_CURRENT_SOURCE_DIR}/${test_name}/config.yaml"
                 "-p" "${CMAKE_CURRENT_SOURCE_DIR}/${test_name}/particles.txt"
                 "-d" "${CMAKE_CURRENT_SOURCE_DIR}/${test_name}/decaymodes.txt"
+                "-c" "General: {Delta_Time: 0.01}"
+                "-c" "Collision_Term: {Collision_Criterion: Stochastic}"
                 "-f"
                 ">" "/dev/null"
             DEPENDS "${CMAKE_BINARY_DIR}/smash"

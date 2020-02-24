@@ -75,6 +75,8 @@ function(dilepton_test
                 "-o" "${data_folder}"
                 "-i" "${config_file}"
                 "-d" "${CMAKE_CURRENT_SOURCE_DIR}/decaymodes.txt"
+                "-c" "General: {Delta_Time: 0.01}"
+                "-c" "Collision_Term: {Collision_Criterion: Stochastic}"
                 "-f"
                 ${kinetic_energy_config}
                 ">" "/dev/null"

@@ -27,6 +27,8 @@ function(run_one_energy
       add_custom_command(OUTPUT "${data_file}" "${data_folder}/config.yaml"
           COMMAND "${CMAKE_BINARY_DIR}/smash"
               "-c" "Modi: {Collider: {Sqrtsnn: ${energy}} }"
+              "-c" "General: {Delta_Time: 0.01}"
+              "-c" "Collision_Term: {Collision_Criterion: Stochastic}"
               "-o" "${data_folder}"
               "-i" "${CMAKE_CURRENT_SOURCE_DIR}/config_${system}.yaml"
               "-f"
@@ -105,17 +107,17 @@ run_one_energy("4.915;PbPb")
 run_one_energy("6.405;PbPb")
 run_one_energy("7.735;PbPb")
 run_one_energy("8.865;PbPb")
-run_one_energy("12.395;PbPb")
-run_one_energy("17.31;PbPb")
+# run_one_energy("12.395;PbPb")
+# run_one_energy("17.31;PbPb")
 run_one_energy("5.5;AuAu")
 run_one_energy("7.7;AuAu")
-run_one_energy("11.5;AuAu")
-run_one_energy("19.6;AuAu")
-run_one_energy("27;AuAu")
-run_one_energy("39;AuAu")
-run_one_energy("62.4;AuAu")
-run_one_energy("130;AuAu")
-run_one_energy("200;AuAu")
+# run_one_energy("11.5;AuAu")
+# run_one_energy("19.6;AuAu")
+# run_one_energy("27;AuAu")
+# run_one_energy("39;AuAu")
+# run_one_energy("62.4;AuAu")
+# run_one_energy("130;AuAu")
+# run_one_energy("200;AuAu")
 #run_one_energy("2760;PbPb")
 
 
